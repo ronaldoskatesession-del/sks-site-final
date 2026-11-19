@@ -1,0 +1,12 @@
+SKS — MANUTENÇÃO PONTUAL — PROJETO COMPLETO
+
+1. Extraia o ZIP inteiro.
+2. Abra SKS_Manutencao_Agentes_COMPLETO e copie TODO o conteúdo para a pasta principal do seu projeto, onde está server.cjs.
+3. Aceite substituir os arquivos e mesclar as pastas. Não precisa separar arquivos: este pacote não contém local-data.
+4. Reinicie o servidor SKS e pressione Ctrl+F5 no navegador.
+
+Esta manutenção remove Quick Settings, corrige Perfil/Configurações/Sair e padroniza os seis níveis dos Agentes SKS. Professor aparece como Agente Mentor sem alterar seu progresso de estudo. Novos participantes começam como Agente em Formação, a 0%.
+
+O relatório ALTERACOES-E-TESTES.md lista os arquivos modificados, os testes e as comparações de preservação. O servidor, a autenticação, o Financeiro, as aulas e a Jornada permanecem como no último pacote.
+
+Seu banco local permanece no projeto instalado; nenhum banco substituto acompanha o ZIP. Não use o antigo aplicador de apenas três arquivos para esta atualização.

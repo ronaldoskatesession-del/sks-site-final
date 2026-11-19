@@ -1,0 +1,33 @@
+/* Catalogue confined to the creator environment. Existing photos and card identity. */
+.teacher-disciplines{--fs-panel:var(--panel);--fs-line:var(--border);--fs-ink:var(--text);--fs-muted:var(--muted);--fs-accent:#ffa700}
+.teacher-disciplines .fs-tabs{display:flex;gap:3px;align-items:center;flex-wrap:wrap;padding:4px;border:1px solid var(--fs-line);border-radius:8px;margin:0 0 13px;background:var(--fs-panel)}
+.teacher-disciplines .fs-tab{padding:8px 10px;background:transparent;border:0;border-radius:5px;color:var(--fs-muted);font:inherit;font-size:11px;cursor:pointer}
+.teacher-disciplines .fs-tab.is-active{background:#ffa70015;color:var(--fs-accent)}
+.teacher-disciplines .fs-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.teacher-disciplines .fs-card{min-width:0;overflow:hidden;border:1px solid var(--fs-line);border-radius:9px;background:var(--fs-panel);transition:transform .18s,border-color .18s,box-shadow .18s}
+.teacher-disciplines .fs-card-open{display:flex;flex-direction:column;width:100%;height:100%;text-align:left;border:0;background:transparent;padding:0;cursor:pointer;color:var(--fs-ink);text-decoration:none}
+.teacher-disciplines .fs-card:hover{border-color:#ffa70088;transform:translateY(-2px)}
+.teacher-disciplines .fs-card-open:focus-visible,.teacher-disciplines .fs-tab:focus-visible{outline:2px solid var(--fs-accent);outline-offset:2px}
+.teacher-disciplines .fs-photo{position:relative;display:block;aspect-ratio:16/9;width:100%;flex:0 0 auto;overflow:hidden;background-image:url('assets/formacoes-atlas.png');background-size:300% auto;background-position:var(--fs-image-x) var(--fs-image-y)}
+.teacher-disciplines .fs-symbol{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.teacher-disciplines .fs-icon-badge{position:absolute;top:8px;left:8px;display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffc6ba59;border-radius:7px;background:linear-gradient(135deg,#f25451,#ce0d31 70%);box-shadow:inset 1px 1px 0 #ffd1c34d,0 3px 12px #0005;color:#fff}
+.teacher-disciplines .fs-card-copy{display:flex;flex-direction:column;flex:1;padding:9px;min-width:0}
+.teacher-disciplines .fs-unit-label{display:block;color:var(--fs-muted);font-size:8px;line-height:1.4;margin-bottom:4px}
+.teacher-disciplines .fs-card-title{display:block;margin-bottom:4px;color:var(--fs-ink);font-size:12px;font-weight:760;line-height:1.22;letter-spacing:-.025em}
+.teacher-disciplines .fs-card-description{display:block;color:var(--fs-muted);font-size:10px;line-height:1.4;flex:1;min-height:31px;margin-bottom:9px}
+.teacher-disciplines .fs-card-bottom{display:flex;align-items:flex-end;gap:8px;margin-top:auto}
+.teacher-disciplines .fs-card-progress{position:relative;display:block;flex:1;padding-right:26px;min-width:0}
+.teacher-disciplines .fs-module-count{display:block;color:var(--fs-muted);font-size:9px;line-height:1.3;margin-bottom:5px}
+.teacher-disciplines .fs-progress-line{display:block;height:3px;background:#ffffff12;border-radius:4px;overflow:hidden}
+.teacher-disciplines .fs-progress-line i{display:block;height:100%;background:#e22b52}
+.teacher-disciplines .fs-progress-value{position:absolute;right:0;bottom:-2px;color:var(--fs-muted);font-size:8px}
+.teacher-disciplines .fs-card-arrow{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1px solid var(--fs-line);color:var(--fs-muted)}
+.teacher-disciplines .fs-card-arrow .fs-symbol{width:13px;height:13px}
+@media(max-width:1100px){.teacher-disciplines .fs-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:650px){.teacher-disciplines .fs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.teacher-disciplines .fs-tab{font-size:10px}}
+/* Courses with a single module per phase keep phase labels and share the available columns. */
+#catalog-results.catalog-results--compact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 13px;align-items:start}
+#catalog-results.catalog-results--compact .catalog-section{min-width:0;margin:0}
+#catalog-results.catalog-results--compact .module-grid{grid-template-columns:minmax(0,1fr)}
+@media(max-width:1140px){#catalog-results.catalog-results--compact{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){#catalog-results.catalog-results--compact{grid-template-columns:minmax(0,1fr)}}

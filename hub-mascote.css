@@ -1,0 +1,19 @@
+.hub-mascote {
+  display:block;
+  flex:none;
+  width:38px;
+  height:41.1667px;
+  padding:0;
+  margin:0;
+  border:0;
+  background-color:transparent;
+  background-size:800% 1100%;
+  background-repeat:no-repeat;
+}
+#sidebar button.hub-mascote {cursor:pointer}
+.hub-mascote:focus-visible {outline:2px solid var(--accent,#00b9f2);outline-offset:2px;border-radius:6px}
+.hub-chat__avatar > .hub-mascote {width:36px;height:39px}
+.sks-agent-robot-wrap:has(> .hub-mascote) > img,
+.hub-chat__avatar:has(> .hub-mascote) > img {display:none}
+
+.sks-disciplines button.hub-mascote {width:54px;height:58.5px;cursor:pointer}
